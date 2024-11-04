@@ -1,7 +1,8 @@
-/* Estilos anteriores... */
+/* Tus estilos actuales */
+/* ... [mantener todos los estilos existentes] ... */
 
-.qr-item {
-    position: relative;
+/* Nuevos estilos para el contenedor QR */
+.qr-display-container {
     background: white;
     padding: 1rem;
     border-radius: 0.5rem;
@@ -9,65 +10,50 @@
     flex-direction: column;
     align-items: center;
     gap: 0.5rem;
-    touch-action: manipulation;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.qr-content {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-}
-
+/* Estilos para el botón de eliminar */
 .delete-btn {
-    width: 100%;
-    padding: 0.5rem;
-    margin-top: 0.5rem;
-    background-color: #dc3545;
+    background: var(--danger-color);
     color: white;
     border: none;
     border-radius: 0.25rem;
+    padding: 0.5rem;
     cursor: pointer;
-    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+    width: 100%;
+    transition: background-color 0.3s ease;
 }
 
 .delete-btn:hover {
     background-color: #c82333;
 }
 
-.hidden {
-    display: none;
+/* Contenedor de QR mejorado */
+.qr-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-/* Prevenir selección de texto durante el long press */
-.qr-item {
-    user-select: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+.qr-container:hover {
+    transform: translateY(-2px);
 }
 
-/* Animación suave para el botón de eliminar */
-.delete-btn {
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
+/* Ajustes para el QR display */
+.qr-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    min-height: 300px;
+    background: var(--background-color);
 }
-
-.delete-btn:not(.hidden) {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Efecto de presión */
-.qr-content:active {
-    transform: scale(0.98);
-}
-
-/* Feedback visual para long press */
-.qr-content.pressing {
-    background-color: rgba(0, 0, 0, 0.05);
-}
-
-/* Resto de los estilos anteriores... */
