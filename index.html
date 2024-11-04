@@ -18,7 +18,7 @@
         <!-- Vista Principal -->
         <div id="mainView">
             <div class="button-container">
-                <button class="btn btn-primary" onclick="startSearch()">Buscar</button>
+                <button class="btn btn-primary">Buscar</button>
                 <button class="btn btn-danger" onclick="showAddFolderDialog()">Agregar</button>
             </div>
             <div class="qr-grid" id="qrGrid"></div>
@@ -27,7 +27,7 @@
         <!-- Vista de Carpeta -->
         <div id="folderView" class="hidden">
             <div class="button-container">
-                <button class="btn btn-primary" onclick="startSearch()">Buscar</button>
+                <button class="btn btn-primary">Buscar</button>
                 <button class="btn btn-danger" onclick="startScanner()">Agregar</button>
             </div>
             <div id="qrDisplay" class="qr-display"></div>
@@ -36,9 +36,6 @@
 
         <!-- Scanner View -->
         <div id="scannerView" class="scanner-view hidden">
-            <div class="scanner-header">
-                <h2 id="scannerMessage">Escaneando...</h2>
-            </div>
             <div id="reader"></div>
             <button class="btn btn-primary" onclick="stopScanner()">Cancelar</button>
         </div>
