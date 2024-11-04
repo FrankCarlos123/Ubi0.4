@@ -1,0 +1,73 @@
+/* Estilos anteriores... */
+
+.qr-item {
+    position: relative;
+    background: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    touch-action: manipulation;
+}
+
+.qr-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.delete-btn {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c82333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Prevenir selección de texto durante el long press */
+.qr-item {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+/* Animación suave para el botón de eliminar */
+.delete-btn {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.delete-btn:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto de presión */
+.qr-content:active {
+    transform: scale(0.98);
+}
+
+/* Feedback visual para long press */
+.qr-content.pressing {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* Resto de los estilos anteriores... */
